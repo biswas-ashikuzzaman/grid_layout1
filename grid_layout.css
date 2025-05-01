@@ -32,11 +32,25 @@ body {
   background-color: #ffd166;
 }
 .container{
+    height:100% ;
     display: grid;
-    /* grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2fr 3fr; */
-    grid-template: 2fr 3fr /1fr 2fr;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: ;
+   grid-template-areas: 
+   ". h h h h h h h h h h . "
+   "m m c c c c c c c c c c"
+   "f f f f f f f f f f f f";
+}
+.header{
+    grid-area: h;
+
+}
+.footer{
+   grid-area: f;
+}
+.content{
+    grid-area: c;
+}
+.menu{
+    grid-area: m;
 }
